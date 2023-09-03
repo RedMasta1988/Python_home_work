@@ -8,9 +8,9 @@ def decorator(func):
     def wrapper_decorator(*args, **kwargs):
         if "admin" not in args:
             print("Доступ запрещён")
-        value = func(*args, **kwargs)
-        if value == "admin":
+        else:
             print("На Вашем счёте 10 byn")
+        value = func(*args, **kwargs)
         return value
 
     return wrapper_decorator
