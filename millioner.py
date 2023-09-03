@@ -6,7 +6,7 @@ from colorama import Fore, Style
 colorama.init()
 os.system("cls")
 print("")
-print("Всем Привет! С Вами игра 'КТО ХОЧЕТ СТАТЬ МИЛЛИОНЕРОМ!'")
+print("Всем Привет! С Вами игра 'КТО ХОЧЕТ СТАТЬ МИЛЛИОНЕРОМ?'")
 print("")
 name = input("Как Вас зовут? ")
 os.system("cls")
