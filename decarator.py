@@ -1,7 +1,5 @@
 import functools
 
-login = input("Введите login: ")
-
 
 def decorator(func):
     @functools.wraps(func)
@@ -19,6 +17,9 @@ def decorator(func):
 @decorator
 def new_func(name):
     return name
+
+
+login = input("Введите login: ")
 
 
 new_func(login)
