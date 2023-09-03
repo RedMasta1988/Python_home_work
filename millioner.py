@@ -5,21 +5,21 @@ from colorama import Fore, Style
 
 colorama.init()
 os.system("cls")
-print()
+print("")
 print("Всем Привет! С Вами игра 'КТО ХОЧЕТ СТАТЬ МИЛЛИОНЕРОМ!'")
-print()
+print("")
 name = input("Как Вас зовут? ")
 os.system("cls")
-print()
+print("")
 print("Здравствуйте, ", name)
-print()
+print("")
 print(
     "И так, немного о правилах игры:\nУ нас есть 10 вопрос, в каждом вопросе 4 варианта ответа \
 и только 1 ответ правильный.\nЗа каждый правильный ответ Вам будет начисляться определенная сумма. \
 Так же есть 3 подсказки:\n50/50, звонок другу и помощь зала. \
 Каждую подсказку можно использовать только 1 раз,\nпосле чего она пропадает."
 )
-print()
+print("")
 input("Если Вы готовы, то жмите Enter... ")
 os.system("cls")
 bank = 0
@@ -122,12 +122,11 @@ for i in range(1, 11):
         break
 if bank == 1000_000:
     a = round((29 - len(name)) / 2)
-    print()
-    print()
+    print("\n" * 2)
     print(29 * "-")
     print("----" + Fore.YELLOW + "ПОЗДРАВЛЯЕМ С ПОБЕДОЙ" + Style.RESET_ALL + "----")
     print(a * "-" + Fore.YELLOW + name + Style.RESET_ALL + a * "-")
     print("--------" + Fore.YELLOW + "ВЫ МИЛЛИОНЕР" + Style.RESET_ALL + "---------")
     print(29 * "-")
-    print()
-    print()
+    print("\n" * 2)
+
