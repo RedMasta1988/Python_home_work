@@ -100,7 +100,6 @@ for i in range(1, 11):
                 and answers[i - 1][random_number] not in random_fifty_fifty
             ):
                 random_fifty_fifty.append(answers[i - 1][random_number])
-        help.pop(your_answer - 5)            
         while len(random_fifty_fifty) < 2:
             random_number = random.randint(0, 3)
             if (
@@ -137,4 +136,3 @@ if bank == 1000_000:
     print("--------" + Fore.YELLOW + "ВЫ МИЛЛИОНЕР" + Style.RESET_ALL + "---------")
     print(29 * "-")
     print("\n" * 2)
-
