@@ -93,6 +93,14 @@ for i in range(1, 11):
             print("Попробуйте ещё раз... ")
             your_answer = int(input("Ваш вариант ответа: "))
     if your_answer == 5 and help[your_answer - 5] == "50/50":
+        while len(random_fifty_fifty) < 1:
+            random_number = random.randint(0, 3)
+            if (
+                answers[i - 1][random_number] in true_answers
+                and answers[i - 1][random_number] not in random_fifty_fifty
+            ):
+                random_fifty_fifty.append(answers[i - 1][random_number])
+        help.pop(your_answer - 5)            
         while len(random_fifty_fifty) < 2:
             random_number = random.randint(0, 3)
             if (
