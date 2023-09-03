@@ -78,7 +78,7 @@ for i in range(1, 11):
     print(30 * "-")
     your_answer = int(input("Ваш вариант ответа: "))
     while your_answer > (len(help) + 4) or your_answer == 0:
-        print("Попробуйте ещё раз ")
+        print("Попробуйте ещё раз... ")
         your_answer = int(input("Ваш вариант ответа: "))
     if 8 > your_answer > 4 and (
         help[your_answer - 5] == "звонок другу"
@@ -86,11 +86,11 @@ for i in range(1, 11):
     ):
         random_number = random.randint(0, 3)
         help.pop(your_answer - 5)
-        print("Возможно ответ ", answers[i - 1][random_number])
+        print("Возможно ответ - ", answers[i - 1][random_number])
         print(30 * "-")
         your_answer = int(input("Ваш вариант ответа: "))
         while your_answer > (len(help) + 4) or your_answer == 0:
-            print("Попробуйте ещё раз ")
+            print("Попробуйте ещё раз... ")
             your_answer = int(input("Ваш вариант ответа: "))
     if your_answer == 5 and help[your_answer - 5] == "50/50":
         while len(random_fifty_fifty) < 2:
@@ -101,11 +101,11 @@ for i in range(1, 11):
             ):
                 random_fifty_fifty.append(answers[i - 1][random_number])
         help.pop(your_answer - 5)
-        print("Возможно ответ ", random_fifty_fifty[0], random_fifty_fifty[1])
+        print("Возможно ответ - ", random_fifty_fifty[0], random_fifty_fifty[1])
         print(30 * "-")
         your_answer = int(input("Ваш вариант ответа: "))
         while your_answer > (len(help) + 4) or your_answer == 0:
-            print("Попробуйте ещё раз ")
+            print("Попробуйте ещё раз... ")
             your_answer = int(input("Ваш вариант ответа: "))
     if answers[i - 1][your_answer - 1] in true_answers:
         bank += 100_000
