@@ -42,109 +42,32 @@ while True:
             xxx.append(num_9)
         if i == ":":
             xxx.append(list())
-
-    print(
-        xxx[0][0],
-        xxx[1][0],
-        symbol_1[0],
-        xxx[3][0],
-        xxx[4][0],
-        symbol_1[0],
-        xxx[6][0],
-        xxx[7][0],
-    )
-    print(
-        xxx[0][1],
-        xxx[1][1],
-        symbol_1[1],
-        xxx[3][1],
-        xxx[4][1],
-        symbol_1[1],
-        xxx[6][1],
-        xxx[7][1],
-    )
-    print(
-        xxx[0][2],
-        xxx[1][2],
-        symbol_1[2],
-        xxx[3][2],
-        xxx[4][2],
-        symbol_1[2],
-        xxx[6][2],
-        xxx[7][2],
-    )
-    print(
-        xxx[0][3],
-        xxx[1][3],
-        symbol_1[3],
-        xxx[3][3],
-        xxx[4][3],
-        symbol_1[3],
-        xxx[6][3],
-        xxx[7][3],
-    )
-    print(
-        xxx[0][4],
-        xxx[1][4],
-        symbol_1[4],
-        xxx[3][4],
-        xxx[4][4],
-        symbol_1[4],
-        xxx[6][4],
-        xxx[7][4],
-    )
+            
+    for i in range(5):
+        print(
+            tn_new[0][i],
+            tn_new[1][i],
+            symbol_1[i],
+            tn_new[2][i],
+            tn_new[3][i],
+            symbol_1[i],
+            tn_new[4][i],
+            tn_new[5][i],
+        )
     time.sleep(0.2)
     os.system("cls")
-    print(
-        xxx[0][0],
-        xxx[1][0],
-        symbol_2[0],
-        xxx[3][0],
-        xxx[4][0],
-        symbol_2[0],
-        xxx[6][0],
-        xxx[7][0],
-    )
-    print(
-        xxx[0][1],
-        xxx[1][1],
-        symbol_2[1],
-        xxx[3][1],
-        xxx[4][1],
-        symbol_2[1],
-        xxx[6][1],
-        xxx[7][1],
-    )
-    print(
-        xxx[0][2],
-        xxx[1][2],
-        symbol_2[2],
-        xxx[3][2],
-        xxx[4][2],
-        symbol_2[2],
-        xxx[6][2],
-        xxx[7][2],
-    )
-    print(
-        xxx[0][3],
-        xxx[1][3],
-        symbol_2[3],
-        xxx[3][3],
-        xxx[4][3],
-        symbol_2[3],
-        xxx[6][3],
-        xxx[7][3],
-    )
-    print(
-        xxx[0][4],
-        xxx[1][4],
-        symbol_2[4],
-        xxx[3][4],
-        xxx[4][4],
-        symbol_2[4],
-        xxx[6][4],
-        xxx[7][4],
-    )
+    
+    for i in range(5):
+        print(
+            tn_new[0][i],
+            tn_new[1][i],
+            symbol_2[i],
+            tn_new[2][i],
+            tn_new[3][i],
+            symbol_2[i],
+            tn_new[4][i],
+            tn_new[5][i],
+        )
     time.sleep(0.2)
     os.system("cls")
     
