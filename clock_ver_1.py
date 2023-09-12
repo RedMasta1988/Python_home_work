@@ -1,14 +1,26 @@
 import os
-import time
 import datetime
-from variables import *
+import time
 import functools
+
+num_1 = "███ ", " ██ ", " ██ ", " ██ ", "████"
+num_2 = "█████", "   ██", "█████", "██   ", "█████"
+num_3 = "█████", "   ██", " ████", "   ██", "█████"
+num_4 = "██ ██", "██ ██", "█████", "   ██", "   ██"
+num_5 = "█████", "██   ", "█████", "   ██", "█████"
+num_6 = "█████", "██   ", "█████", "██ ██", "█████"
+num_7 = "█████", "   ██", "   ██", "   ██", "   ██"
+num_8 = "█████", "██ ██", "█████", "██ ██", "█████"
+num_9 = "█████", "██ ██", "█████", "   ██", "█████"
+num_0 = "█████", "██ ██", "██ ██", "██ ██", "█████"
+symbol_1 = "  ", "  ", "  ", "  ", "  "
+symbol_2 = "  ", "██", "  ", "██", "  "
 
 
 def decorator(func):
     @functools.wraps(func)
     def wrapper_decorator(*args, **kwargs):
-        time.sleep(0.2)
+        time.sleep(0.5)
         os.system("cls")
         value = func(*args, **kwargs)
         return value
@@ -59,7 +71,6 @@ def first_layer():
             tn_new[6][i],
             tn_new[7][i],
         )
-    return
 
 
 @decorator
@@ -78,49 +89,7 @@ def second_layer():
         )
 
 
-@decorator
-def third_layer():
-    tn_new = tn_func()
-    for i in range(5):
-        print(
-            tn_new[0][i],
-            tn_new[1][i],
-            symbol_3[i],
-            tn_new[3][i],
-            tn_new[4][i],
-            symbol_3[i],
-            tn_new[6][i],
-            tn_new[7][i],
-        )
+while True:
+    first_layer()
 
-
-@decorator
-def fourth_layer():
-    tn_new = tn_func()
-    for i in range(5):
-        print(
-            tn_new[0][i],
-            tn_new[1][i],
-            symbol_4[i],
-            tn_new[3][i],
-            tn_new[4][i],
-            symbol_4[i],
-            tn_new[6][i],
-            tn_new[7][i],
-        )
-
-
-@decorator
-def fifth_layer():
-    tn_new = tn_func()
-    for i in range(5):
-        print(
-            tn_new[0][i],
-            tn_new[1][i],
-            symbol_5[i],
-            tn_new[3][i],
-            tn_new[4][i],
-            symbol_5[i],
-            tn_new[6][i],
-            tn_new[7][i],
-        )
+    second_layer()
