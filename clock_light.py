@@ -1,6 +1,7 @@
 import os
 import datetime
 import time
+import functools
 
 num_1 = "███ ", " ██ ", " ██ ", " ██ ", "████"
 num_2 = "█████", "   ██", "█████", "██   ", "█████"
@@ -16,135 +17,79 @@ symbol_1 = "  ", "  ", "  ", "  ", "  "
 symbol_2 = "  ", "██", "  ", "██", "  "
 
 
-while True:
-    xxx = []
+def decorator(func):
+    @functools.wraps(func)
+    def wrapper_decorator(*args, **kwargs):
+        time.sleep(0.5)
+        os.system("cls")
+        value = func(*args, **kwargs)
+        return value
+
+    return wrapper_decorator
+
+
+def tn_func():
+    tn_new = []
     str_tn = datetime.datetime.now().strftime("%H:%M:%S")
     for i in str_tn:
         if i == "0":
-            xxx.append(num_0)
+            tn_new.append(num_0)
         if i == "1":
-            xxx.append(num_1)
+            tn_new.append(num_1)
         if i == "2":
-            xxx.append(num_2)
+            tn_new.append(num_2)
         if i == "3":
-            xxx.append(num_3)
+            tn_new.append(num_3)
         if i == "4":
-            xxx.append(num_4)
+            tn_new.append(num_4)
         if i == "5":
-            xxx.append(num_5)
+            tn_new.append(num_5)
         if i == "6":
-            xxx.append(num_6)
+            tn_new.append(num_6)
         if i == "7":
-            xxx.append(num_7)
+            tn_new.append(num_7)
         if i == "8":
-            xxx.append(num_8)
+            tn_new.append(num_8)
         if i == "9":
-            xxx.append(num_9)
-        if i == ":":
-            xxx.append(list())
+            tn_new.append(num_9)
+    return tn_new
 
-    print(
-        xxx[0][0],
-        xxx[1][0],
-        symbol_1[0],
-        xxx[3][0],
-        xxx[4][0],
-        symbol_1[0],
-        xxx[6][0],
-        xxx[7][0],
-    )
-    print(
-        xxx[0][1],
-        xxx[1][1],
-        symbol_1[1],
-        xxx[3][1],
-        xxx[4][1],
-        symbol_1[1],
-        xxx[6][1],
-        xxx[7][1],
-    )
-    print(
-        xxx[0][2],
-        xxx[1][2],
-        symbol_1[2],
-        xxx[3][2],
-        xxx[4][2],
-        symbol_1[2],
-        xxx[6][2],
-        xxx[7][2],
-    )
-    print(
-        xxx[0][3],
-        xxx[1][3],
-        symbol_1[3],
-        xxx[3][3],
-        xxx[4][3],
-        symbol_1[3],
-        xxx[6][3],
-        xxx[7][3],
-    )
-    print(
-        xxx[0][4],
-        xxx[1][4],
-        symbol_1[4],
-        xxx[3][4],
-        xxx[4][4],
-        symbol_1[4],
-        xxx[6][4],
-        xxx[7][4],
-    )
-    time.sleep(0.2)
-    os.system("cls")
-    print(
-        xxx[0][0],
-        xxx[1][0],
-        symbol_2[0],
-        xxx[3][0],
-        xxx[4][0],
-        symbol_2[0],
-        xxx[6][0],
-        xxx[7][0],
-    )
-    print(
-        xxx[0][1],
-        xxx[1][1],
-        symbol_2[1],
-        xxx[3][1],
-        xxx[4][1],
-        symbol_2[1],
-        xxx[6][1],
-        xxx[7][1],
-    )
-    print(
-        xxx[0][2],
-        xxx[1][2],
-        symbol_2[2],
-        xxx[3][2],
-        xxx[4][2],
-        symbol_2[2],
-        xxx[6][2],
-        xxx[7][2],
-    )
-    print(
-        xxx[0][3],
-        xxx[1][3],
-        symbol_2[3],
-        xxx[3][3],
-        xxx[4][3],
-        symbol_2[3],
-        xxx[6][3],
-        xxx[7][3],
-    )
-    print(
-        xxx[0][4],
-        xxx[1][4],
-        symbol_2[4],
-        xxx[3][4],
-        xxx[4][4],
-        symbol_2[4],
-        xxx[6][4],
-        xxx[7][4],
-    )
-    time.sleep(0.2)
-    os.system("cls")
-    
+
+@decorator
+def layer_1(tn_new):
+    for i in range(5):
+        print(
+            tn_new[0][i],
+            tn_new[1][i],
+            symbol_1[i],
+            tn_new[2][i],
+            tn_new[3][i],
+            symbol_1[i],
+            tn_new[4][i],
+            tn_new[5][i],
+        )
+    return
+
+
+@decorator
+def layer_2(tn_new):
+    for i in range(5):
+        print(
+            tn_new[0][i],
+            tn_new[1][i],
+            symbol_2[i],
+            tn_new[2][i],
+            tn_new[3][i],
+            symbol_2[i],
+            tn_new[4][i],
+            tn_new[5][i],
+        )
+    return
+
+
+while True:
+    tn_new = tn_func()
+
+    layer_1(tn_new)
+
+    layer_2(tn_new)
