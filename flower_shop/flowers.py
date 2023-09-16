@@ -6,23 +6,23 @@ class Flower:
 
 
 class Rosa(Flower):
-    def __init__(self):
-        super().__init__(self)
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
 
 
 class Pion(Flower):
-    def __init__(self):
-        super().__init__(self)
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
 
 
 class Tulip(Flower):
-    def __init__(self):
-        super().__init__(self)
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
 
 
 class Chamomile(Flower):
-    def __init__(self):
-        super().__init__(self)
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
 
 
 class MyBouquet:
